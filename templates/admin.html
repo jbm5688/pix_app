@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Painel Admin</title>
+</head>
+<body>
+  <h2>Relatório de Depósitos</h2>
+  <table border="1">
+    <tr>
+      <th>CPF</th>
+      <th>E-mail</th>
+      <th>Status</th>
+    </tr>
+    {% for cpf, email, status in registros %}
+      <tr>
+        <td>{{ cpf }}</td>
+        <td>{{ email }}</td>
+        <td>{{ status }}</td>
+      </tr>
+    {% endfor %}
+  </table>
+  <p><b>Total de depósitos registrados:</b> {{ total }}</p>
+</body>
+</html>

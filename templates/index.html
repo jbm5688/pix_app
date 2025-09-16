@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Depósito Solidário</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <h2>Depósito Solidário - R$ 1,00</h2>
+  {% with messages = get_flashed_messages() %}
+    {% if messages %}
+      <div class="alert">{{ messages[0] }}</div>
+    {% endif %}
+  {% endwith %}
+  <form method="POST">
+    <label>CPF:</label><br>
+    <input type="text" name="cpf" required><br><br>
+    <label>E-mail:</label><br>
+    <input type="email" name="email" required><br><br>
+    <button type="submit">Gerar Pix</button>
+  </form>
+</body>
+</html>
