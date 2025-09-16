@@ -1,0 +1,38 @@
+# Ambiente virtual
+venv/
+ENV/
+env/
+.venv/
+
+# Cache do Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Arquivos temporários
+*.log
+*.pot
+*.pyc
+*.pyo
+*.pyd
+*.swp
+*.swo
+*.DS_Store
+
+# Banco local (se quiser ignorar o SQLite local)
+database.db
+
+# Configurações de IDE
+.vscode/
+.idea/
+
+# Build / distribuições
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Arquivos de testes
+.coverage
+.tox/
+pytest_cache/
